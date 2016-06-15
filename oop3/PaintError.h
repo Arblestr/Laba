@@ -9,5 +9,6 @@ public:
     {
         return "\nCan not get lines/vertexes from model\n";
     }
+};
 
 #endif // PAINTERROR_H

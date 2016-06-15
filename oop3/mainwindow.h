@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "BaseCreator.h"
 #include "FileLoader.h"
+#include "FoundationPaint.h"
+#include "Paint.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +24,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    QGraphicsScene* Scene;
 };
 
 #endif // MAINWINDOW_H

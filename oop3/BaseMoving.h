@@ -19,6 +19,4 @@ protected:
     //cPoint* Center;
 };
 
-#include "BaseMovingFuncs.h"
-
 #endif // BASEMOVING_H

@@ -19,6 +19,4 @@ protected:
     double Alpha;
 };
 
-#include "BaseScalingFuncs.h"
-
 #endif // BASESCALING_H

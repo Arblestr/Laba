@@ -1,5 +1,6 @@
 #ifndef POINT_H
 #define POINT_H
+#include "List.h"
 #include "BaseClass.h"
 
 class cPoint: public BaseClass

@@ -41,5 +41,4 @@ private:
     double Angle;
 };
 
-#include "CameraRotationFuncs.h"
 #endif // CAMERAROTATION_H

@@ -5,8 +5,9 @@
 #include "QPen"
 #include "Point.h"
 
-class FoundstionPaint: public BaseFoundationPaint
+class FoundationPaint: public BaseFoundationPaint
 {
+public:
     FoundationPaint(QGraphicsScene* Scene);
     ~FoundationPaint();
 

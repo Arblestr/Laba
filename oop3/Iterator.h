@@ -52,4 +52,6 @@ private:
     cList<T>* List;
 };
 
+#include "IteratorFuncs.h"
+
 #endif // ITERATOR_H

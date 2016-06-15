@@ -30,6 +30,4 @@ private:
     int LinesNum;
 };
 
-#include "FileLoaderFuncs.h"
-
 #endif // FILELOADER_H

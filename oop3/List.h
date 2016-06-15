@@ -33,4 +33,6 @@ private:
     item<T> *Tail;
 };
 
+#include "ListFuncs.h"
+
 #endif // LIST_H

@@ -59,5 +59,4 @@ private:
 
 };
 
-#include "CreatorScalingFuncs.h"
 #endif // CREATORSCALING_H

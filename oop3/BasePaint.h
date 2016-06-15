@@ -7,10 +7,10 @@
 class BasePaint
 {
 public:
-    virtual void paint_model(cModel& Model, cCamera7 Camera) = 0;
+    virtual void paint_model(cModel& Model, cCamera& Camera) = 0;
 
 protected:
-    FoundationPaint* FoundationPaint;
+    FoundationPaint* FoundationPaintObject;
 };
 
 #endif // BASEPAINT_H

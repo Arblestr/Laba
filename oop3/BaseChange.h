@@ -2,7 +2,7 @@
 #define BASECHANGE_H
 #include "BaseElementChange.h"
 
-#include "Point.h"
+class cPoint;
 
 class BaseChange: public BaseElementChange
 {

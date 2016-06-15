@@ -16,6 +16,4 @@ public:
     cList<BaseClass*> Objects;
 };
 
-#include "CompositeFuncs.h"
-
 #endif // COMPOSITE_H

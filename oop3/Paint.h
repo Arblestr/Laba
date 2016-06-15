@@ -5,12 +5,12 @@
 class Paint : public BasePaint
 {
 public:
-    Paint(FoundationPaint* FoundationPaint);
+    Paint(FoundationPaint* FoundationPaintObject);
     ~Paint();
     virtual void paint_model(cModel& Model, cCamera& Camera);
 
 private:
-    FoundationPaint* FoundationPaint;
+    FoundationPaint* FoundationPaintObject;
 };
 
 #endif // PAINT_H

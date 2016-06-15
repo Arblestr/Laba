@@ -1,7 +1,7 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include "list.h"
+#include "List.h"
 #include <math.h>
 
 class cVector

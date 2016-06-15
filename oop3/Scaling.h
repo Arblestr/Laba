@@ -43,6 +43,4 @@ public:
     virtual void run(cPoint*);
 };
 
-#include "ScalingFuncs.h"
-
 #endif // SCALING_H

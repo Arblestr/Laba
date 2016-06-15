@@ -32,6 +32,5 @@ public:
     virtual void run(cPoint* PointToRotate);
 };
 
-#include "RotationFuncs.h"
 
 #endif // ROTATION_H

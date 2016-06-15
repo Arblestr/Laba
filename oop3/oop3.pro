@@ -14,12 +14,24 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     Point.cpp \
     Vector.cpp \
-    Iterator.cpp \
-    List.cpp \
     Line.cpp \
     Scaling.cpp \
     Rotation.cpp \
-    Model.cpp
+    Model.cpp \
+    Paint.cpp \
+    Moving.cpp \
+    FoundationPaint.cpp \
+    CreatorScaling.cpp \
+    CreatorRotation.cpp \
+    CreatorMoving.cpp \
+    CreatorCameraRotation.cpp \
+    Composite.cpp \
+    FileLoader.cpp \
+    Commander.cpp \
+    CameraRotation.cpp \
+    BaseScaling.cpp \
+    BaseRotation.cpp \
+    BaseMoving.cpp
 
 HEADERS  += mainwindow.h \
     BaseList.h \
@@ -32,42 +44,31 @@ HEADERS  += mainwindow.h \
     BaseModel.h \
     Iterator.h \
     IteratorError.h \
-    ModelFuncs.h \
     Composite.h \
-    CompositeFuncs.h \
     CompositeError.h \
     BaseLoader.h \
     FileLoader.h \
-    FileLoaderFuncs.h \
     FileLoaderError.h \
     ModelError.h \
     BaseChange.h \
     BaseRotation.h \
-    BaseRotationFuncs.h \
     Rotation.h \
     BaseMoving.h \
-    BaseMovingFuncs.h \
     Moving.h \
-    MovingFuncs.h \
     Scaling.h \
     BaseScaling.h \
-    BaseScalingFuncs.h \
     BaseAction.h \
     ActionLoad.h \
     ActionLoadFuncs.h \
-    CommanderFuncs.h \
     Commander.h \
     BaseCreator.h \
     CreatorRotation.h \
-    CreatorRotationFuncs.h \
     BaseChangeError.h \
     ActionRotate.h \
     ActionRotateFuncs.h \
     BaseCreatorError.h \
     CreatorScaling.h \
-    CreatorScalingFuncs.h \
     CreatorMoving.h \
-    CreatorMovingFuncs.h \
     ActionScale.h \
     ActionMove.h \
     ActionMoveFuncs.h \
@@ -84,14 +85,13 @@ HEADERS  += mainwindow.h \
     CameraRotation.h \
     BaseElementChange.h \
     BaseElement.h \
-    CreatorCameraRotationFuncs.h \
-    CameraRotationFuncs.h \
     FoundationPaint.h \
-    FoundationPaintFuncs.h \
     BaseFoundationPaint.h \
     BasePaint.h \
     Paint.h \
-    PaintFuncs.h \
-    PaintError.h
+    PaintError.h \
+    Model.h \
+    ListFuncs.h \
+    IteratorFuncs.h
 
 FORMS    += mainwindow.ui

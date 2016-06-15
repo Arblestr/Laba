@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QGraphicsScene*  Scene = new QGraphicsScene(this);
+    Scene = new QGraphicsScene(this);
     ui->graphicsView->setScene(Scene);
 }
 
@@ -20,7 +20,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    //cComposite* Models;
-    //FileLoader FL("Cube.txt");
-    //FL.load_model(Models);
+    cComposite* Models = new cComposite;
+    FileLoader FL("Cube.txt");
+    FL.load_model(Models);
+
+    FoundationPaint FP(Scene);
+    Paint P(&FP);
+
+    cIterator<BaseClass*> IterForModelList(Models->Objects);
+    cModel* Model;
+    Model = (cModel*)IterForModelList.get_value();
+
+    cCamera* Camera;
+
+    P.paint_model(*Model,*Camera);
 }

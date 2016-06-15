@@ -33,6 +33,4 @@ public:
     virtual void run(cPoint*);
 };
 
-#include "MovingFuncs.h"
-
 #endif // MOVING_H

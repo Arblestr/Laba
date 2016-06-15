@@ -49,6 +49,4 @@ private:
 
 };
 
-#include "CreatorCameraRotationFuncs.h"
-
 #endif // CREATORCAMERAROTATION_H

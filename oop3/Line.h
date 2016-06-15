@@ -1,6 +1,7 @@
 #ifndef LINE_H
 #define LINE_H
 #include "BaseClass.h"
+#include "Point.h"
 
 class cLine: public BaseClass
 {

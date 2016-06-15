@@ -15,6 +15,4 @@ private:
     cComposite* Object;
 };
 
-#include "CommanderFuncs.h"
-
 #endif // COMMANDER_H

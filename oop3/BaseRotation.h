@@ -19,6 +19,4 @@ protected:
     cPoint* Center;
 };
 
-#include "BaseRotationFuncs.h"
-
 #endif // BASEROTATION_H

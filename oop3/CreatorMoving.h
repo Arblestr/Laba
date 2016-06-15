@@ -44,6 +44,4 @@ private:
     double Delta;
 
 };
-
-#include "CreatorMovingFuncs.h"
 #endif // CREATORMOVING_H

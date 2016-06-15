@@ -1,5 +1,4 @@
 #include "Vector.h"
-#include "Iterator.h"
 #include "VectorError.h"
 #include <cstddef>
 

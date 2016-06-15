@@ -48,6 +48,4 @@ private:
 
 };
 
-#include "CreatorRotationFuncs.h"
-
 #endif // CREATORROTATION_H
