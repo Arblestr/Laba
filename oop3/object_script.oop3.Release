@@ -1,0 +1,12 @@
+INPUT(
+./release/main.o
+./release/mainwindow.o
+./release/Point.o
+./release/Vector.o
+./release/Iterator.o
+./release/List.o
+./release/Line.o
+./release/Scaling.o
+./release/Rotation.o
+./release/moc_mainwindow.o
+);

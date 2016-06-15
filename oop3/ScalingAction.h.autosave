@@ -1,0 +1,14 @@
+#ifndef SCALINGACTION_H
+#define SCALINGACTION_H
+#include "BaseAction.h"
+
+class ScalingAction: public BaseAction
+{
+public:
+    ScalingAction();
+    ~ScalingAction();
+
+    virtual void make(cComposite *Object);
+};
+
+#endif // SCALINGACTION_H
