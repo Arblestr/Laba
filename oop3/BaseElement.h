@@ -7,6 +7,12 @@ class BaseElement
 {
 public:
     virtual void change(BaseElementChange* ChangeType) {}
+    virtual void add(BaseElement* BaseElementObject) {}
+
+    virtual bool IsComposite()
+    {
+        return false;
+    }
 };
 
 #endif // BASEELEMENT_H

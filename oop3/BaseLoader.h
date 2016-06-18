@@ -9,7 +9,7 @@ public:
     virtual cPoint get_point() = 0;
     virtual cLine get_line(cModel*) const = 0;
     virtual cModel* get_model() = 0;
-    virtual BaseClass* load_model(cComposite *Object) = 0;
+    virtual void load_model(BaseElement *Object) = 0;
 };
 
 #endif // BASELOADER_H

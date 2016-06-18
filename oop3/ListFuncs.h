@@ -4,12 +4,60 @@
 #include "ListError.h"
 #include <cstddef>
 
+template <typename T>
+cList<T> :: cList(const cList<T>& ConstList)
+{
+    this->Head = NULL;
+    this->Tail = NULL;
+    this->Length = 0;
+
+    item<T>* tempItem = ConstList.Head;
+
+    while (tempItem != NULL)
+    {
+        this->add_item(tempItem->Info);
+        tempItem = tempItem->Next;
+    }
+}
+
+/*template <typename T>
+cList<T> :: cList(cList<T>&& List)
+{
+    this->Head = NULL;
+    this->Tail = NULL;
+    this->Length = 0;
+
+    item<T>* tempItem = List.Head;
+
+    while (tempItem != NULL)
+    {
+        this->add_item(tempItem->Info);
+        tempItem = tempItem->Next;
+    }
+}*/
+
 template  <typename T>
 cList<T> :: cList()
 {
     this->Head = NULL;
     this->Tail = NULL;
     this->Length = 0;
+}
+
+template <typename T>
+cList<T>& cList<T> :: operator=(const cList<T>& List)
+{
+    this->clear();
+
+    item<T>* tempItem = List.Head;
+
+    while (tempItem != NULL)
+    {
+       this->add_item(tempItem->Info);
+       tempItem = tempItem->Next;
+    }
+
+    return *this;
 }
 
 template <typename T>

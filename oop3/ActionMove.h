@@ -9,7 +9,7 @@ public:
     ~ActionMoveX();
     ActionMoveX(double Delta);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Delta;
@@ -22,7 +22,7 @@ public:
     ~ActionMoveY();
     ActionMoveY(double Delta);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Delta;
@@ -35,11 +35,10 @@ public:
     ~ActionMoveZ();
     ActionMoveZ(double Delta);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Delta;
 };
 
-#include "ActionMoveFuncs.h"
 #endif // ACTIONMOVE_H

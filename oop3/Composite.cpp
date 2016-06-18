@@ -12,18 +12,18 @@ cComposite::~cComposite()
     this->clear();
 }
 
-void cComposite::add(BaseClass* BaseClassObject)
+void cComposite::add(BaseElement* BaseElementObject)
 {
-    if (!BaseClassObject)
+    if (!BaseElementObject)
     {
         throw CompositeAddError();
     }
-    this->Objects.add_item(BaseClassObject);
+    this->Objects.add_item(BaseElementObject);
 }
 
 void cComposite::change(BaseChange* ChangeType)
 {
-    cIterator<BaseClass*> IterForChange(this->Objects);
+    cIterator<BaseElement*> IterForChange(this->Objects);
     if (IterForChange.IsNullIter())
     {
         throw IteratorEmptyItemError();

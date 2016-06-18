@@ -26,12 +26,8 @@ public:
     cIterator<T> & operator=(const cIterator<T> & GettingIter);
 
     void go_to_next();
-    //cIterator<T> & operator++();
-    //cIterator<T> operator++(T);
 
     void go_to_prev();
-    //cIterator<T> & operator--();
-    //cIterator<T> operator--(T);
 
     T& operator*();
     T& get_value();

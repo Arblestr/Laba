@@ -127,7 +127,7 @@ cModel* FileLoader :: get_model()
     return Model;
 }
 
-BaseClass* FileLoader :: load_model(cComposite *Object)
+void FileLoader :: load_model(BaseElement *Object)
 {
 
     this->open_file();
@@ -140,11 +140,14 @@ BaseClass* FileLoader :: load_model(cComposite *Object)
     }
     try
     {
-        for (int i = 0; i < Num; i++)
-        {
-            cModel* Model = this->get_model();
-            Object->add(Model);
-        }
+        if (Num > 1)
+          for (int i = 0; i < Num; i++)
+          {
+              cModel* Model = this->get_model();
+              Object->add(Model);
+          }
+        else
+            Object = this->get_model();
         this->close_file();
     }
     catch(BaseError& err)
@@ -152,6 +155,4 @@ BaseClass* FileLoader :: load_model(cComposite *Object)
         this->close_file();
         throw;
     }
-
-    return Object;
 }

@@ -2,6 +2,48 @@
 #include "VectorError.h"
 #include <cstddef>
 
+cVector :: cVector(const cVector& constVector)
+{
+    double X = constVector.get_X();
+    double Y = constVector.get_Y();
+    double Z = constVector.get_Z();
+    double L = constVector.get_L();
+    this->v.add_item(X);
+    this->v.add_item(Y);
+    this->v.add_item(Z);
+    this->v.add_item(L);
+}
+
+double cVector :: get_X() const
+{
+    cConstIterator<double> IterForV(this->v);
+    return IterForV.get_value();
+}
+
+double cVector :: get_Y() const
+{
+    cConstIterator<double> IterForV(this->v);
+    IterForV.go_to_next();
+    return IterForV.get_value();
+}
+
+double cVector :: get_Z() const
+{
+    cConstIterator<double> IterForV(this->v);
+    IterForV.go_to_next();
+    IterForV.go_to_next();
+    return IterForV.get_value();
+}
+
+double cVector :: get_L() const
+{
+    cConstIterator<double> IterForV(this->v);
+    IterForV.go_to_next();
+    IterForV.go_to_next();
+    IterForV.go_to_next();
+    return IterForV.get_value();
+}
+
 cVector :: cVector()//
 {
     double Init = 0;

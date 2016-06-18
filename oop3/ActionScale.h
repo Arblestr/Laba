@@ -9,7 +9,7 @@ public:
     ~ActionScaleX();
     ActionScaleX(double Alpha);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Alpha;
@@ -22,7 +22,7 @@ public:
     ~ActionScaleY();
     ActionScaleY(double Alpha);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Alpha;
@@ -35,7 +35,7 @@ public:
     ~ActionScaleZ();
     ActionScaleZ(double Alpha);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Alpha;
@@ -48,12 +48,10 @@ public:
     ~ActionScaleXYZ();
     ActionScaleXYZ(double Alpha);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Alpha;
 };
-
-#include "ActionScaleFuncs.h"
 
 #endif // ACTIONSCALE_H

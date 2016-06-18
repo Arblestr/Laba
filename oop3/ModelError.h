@@ -5,7 +5,7 @@
 class ModelMemoryError: public BaseError
 {
 public:
-    virtual char* what()
+    virtual const char* what()
     {
         return "\nCan not allocate memory for model\n";
     }

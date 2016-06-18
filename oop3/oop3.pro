@@ -31,7 +31,12 @@ SOURCES += main.cpp\
     CameraRotation.cpp \
     BaseScaling.cpp \
     BaseRotation.cpp \
-    BaseMoving.cpp
+    BaseMoving.cpp \
+    ActionScale.cpp \
+    ActionMove.cpp \
+    ActionRotate.cpp \
+    ActionCameraRotate.cpp \
+    ActionLoad.cpp
 
 HEADERS  += mainwindow.h \
     BaseList.h \
@@ -59,20 +64,16 @@ HEADERS  += mainwindow.h \
     BaseScaling.h \
     BaseAction.h \
     ActionLoad.h \
-    ActionLoadFuncs.h \
     Commander.h \
     BaseCreator.h \
     CreatorRotation.h \
     BaseChangeError.h \
     ActionRotate.h \
-    ActionRotateFuncs.h \
     BaseCreatorError.h \
     CreatorScaling.h \
     CreatorMoving.h \
     ActionScale.h \
     ActionMove.h \
-    ActionMoveFuncs.h \
-    ActionScaleFuncs.h \
     Vector.h \
     VectorError.h \
     BaseCamera.h \
@@ -80,7 +81,6 @@ HEADERS  += mainwindow.h \
     CameraFuncs.h \
     ActionCameraRotate.h \
     BaseCameraChange.h \
-    ActionCameraRotateFuncs.h \
     CreatorCameraRotation.h \
     CameraRotation.h \
     BaseElementChange.h \
@@ -92,6 +92,9 @@ HEADERS  += mainwindow.h \
     PaintError.h \
     Model.h \
     ListFuncs.h \
-    IteratorFuncs.h
+    IteratorFuncs.h \
+    ActionPaint.h \
+    IteratorConst.h \
+    IteratorConstFuncs.h
 
 FORMS    += mainwindow.ui

@@ -9,7 +9,7 @@ public:
     ~ActionRotateX();
     ActionRotateX(double Angle, cPoint Center);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
@@ -23,7 +23,7 @@ public:
     ~ActionRotateY();
     ActionRotateY(double Angle, cPoint Center);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
@@ -37,12 +37,11 @@ public:
     ~ActionRotateZ();
     ActionRotateZ(double Angle, cPoint Center);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
     cPoint* Center;
 };
 
-#include "ActionRotateFuncs.h"
 #endif // ACTIONROTATE_H

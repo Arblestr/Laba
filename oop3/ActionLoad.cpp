@@ -1,8 +1,6 @@
-#ifndef ACTIONLOADFUNCS_H
-#define ACTIONLOADFUNCS_H
 #include "FileLoader.h"
-#include "FileLoaderError.h"l"
-
+#include "FileLoaderError.h"
+#include "ActionLoad.h"
 ActionLoad :: ActionLoad()
 {
 }
@@ -16,7 +14,7 @@ ActionLoad :: ~ActionLoad()
 {
 }
 
-void ActionLoad :: make(BaseElement* Object)
+void ActionLoad :: make(BaseElement* Object, BaseElement* Camera, int Index)
 {
     FileLoader* FL = new FileLoader(this->FileName);
 
@@ -29,4 +27,3 @@ void ActionLoad :: make(BaseElement* Object)
 
 }
 
-#endif // ACTIONLOADFUNCS_H

@@ -8,14 +8,21 @@ Commander :: Commander()
     {
         throw CompositeMemoryError();
     }
+
+    this->Camera = new cComposite;
+    if (!this->Camera)
+    {
+        throw CompositeMemoryError();
+    }
 }
 
 Commander :: ~Commander()
 {
     delete this->Object;
+    delete this->Camera;
 }
 
-void Commander :: make(BaseAction& Action)
+void Commander :: make(BaseAction& Action, int Index)
 {
-    Action.make(this->Object);
+    Action.make(this->Object, this->Camera, Index);
 }

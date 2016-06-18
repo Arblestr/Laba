@@ -9,10 +9,11 @@ public:
     Commander();
     ~Commander();
 
-    void make(BaseAction& Action);
+    void make(BaseAction& Action, int Index);
 
 private:
-    cComposite* Object;
+    BaseElement* Object;
+    BaseElement* Camera;
 };
 
 #endif // COMMANDER_H

@@ -21,5 +21,10 @@ INPUT(
 ./debug/BaseScaling.o
 ./debug/BaseRotation.o
 ./debug/BaseMoving.o
+./debug/ActionScale.o
+./debug/ActionMove.o
+./debug/ActionRotate.o
+./debug/ActionCameraRotate.o
+./debug/ActionLoad.o
 ./debug/moc_mainwindow.o
 );

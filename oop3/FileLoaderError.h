@@ -5,7 +5,7 @@
 class FileLoaderOpenError: public BaseError
 {
 public:
-    virtual char* what()
+    virtual const char* what()
     {
         return "\nCan not open the file\n";
     }
@@ -14,7 +14,7 @@ public:
 class FileLoaderReadError: public BaseError
 {
 public:
-    virtual char* what()
+    virtual const char* what()
     {
         return "\nWrong parameters in the file\n";
     }
@@ -23,7 +23,7 @@ public:
 class FileLoaderMemoryError: public BaseError
 {
 public:
-    virtual char* what()
+    virtual const char* what()
     {
         return "\nCan not allcoate memory for FileLoader object\n";
     }

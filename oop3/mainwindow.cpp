@@ -20,18 +20,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    cComposite* Models = new cComposite;
-    FileLoader FL("Cube.txt");
-    FL.load_model(Models);
+    Commander* CommanderObject = new Commander();
+    FoundationPaint* FP = new FoundationPaint(Scene);
 
-    FoundationPaint FP(Scene);
-    Paint P(&FP);
+    ActionLoad* ActionLoadObject = new ActionLoad("Cube.txt");
+    CommanderObject->make(*ActionLoadObject,0);
 
-    cIterator<BaseClass*> IterForModelList(Models->Objects);
-    cModel* Model;
-    Model = (cModel*)IterForModelList.get_value();
-
-    cCamera* Camera;
-
-    P.paint_model(*Model,*Camera);
+    ActionPaint* ActionPaintObject = new ActionPaint(FP);
+    CommanderObject->make(*ActionPaintObject,0);
 }

@@ -5,7 +5,7 @@
 class VectorLengthError: public BaseError
 {
 public:
-    virtual char* what()
+    virtual const char* what()
     {
         return "\nVector has wrong length\n";
     }

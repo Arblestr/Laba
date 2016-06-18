@@ -2,7 +2,6 @@
 #define LIST_H
 #include "BaseList.h"
 
-
 template <typename T>
 struct item
 {
@@ -11,13 +10,18 @@ struct item
 };
 
 #include "Iterator.h"
+#include "IteratorConst.h"
 
 template <typename T>
 class cList : public BaseList
 {
 public:
     cList();
+    cList(const cList<T>& ConstList);
+    //cList(cList<T>&& List);
     ~cList();
+
+    cList<T>& operator=(const cList<T>& List);
 
     void add_item(T&);
     T& del_item();
@@ -27,6 +31,7 @@ public:
     virtual int get_count() const;
 
     friend class cIterator<T>;
+    friend class cConstIterator<T>;
 
 private:
     item<T> *Head;

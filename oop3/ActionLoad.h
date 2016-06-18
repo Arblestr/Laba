@@ -9,11 +9,9 @@ public:
     ~ActionLoad();
     ActionLoad(const char* FileName);
 
-    virtual void make(BaseElement* Object);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     const char* FileName;
 };
-
-#include "ActionLoadFuncs.h"
 #endif // ACTIONLOAD_H

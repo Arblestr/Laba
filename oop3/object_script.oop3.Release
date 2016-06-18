@@ -21,5 +21,10 @@ INPUT(
 ./release/BaseScaling.o
 ./release/BaseRotation.o
 ./release/BaseMoving.o
+./release/ActionScale.o
+./release/ActionMove.o
+./release/ActionRotate.o
+./release/ActionCameraRotate.o
+./release/ActionLoad.o
 ./release/moc_mainwindow.o
 );

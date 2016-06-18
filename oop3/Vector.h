@@ -9,12 +9,18 @@ class cVector
 public:
     cVector();
     cVector(double X, double Y, double Z);
+    cVector(const cVector& constVector);
     ~cVector();
 
     void set_X(double X);
     void set_Y(double Y);
     void set_Z(double Z);
     void set_L(double L);
+
+    double get_X() const;
+    double get_Y() const;
+    double get_Z() const;
+    double get_L() const;
 
     double get_length();
     double scalar_mult(cVector v1, cVector v2);

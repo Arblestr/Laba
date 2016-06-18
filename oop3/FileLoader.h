@@ -21,7 +21,7 @@ public:
 
     virtual cModel* get_model();
 
-    virtual BaseClass* load_model(cComposite *Object);
+    virtual void load_model(BaseElement *Object);
 
 private:
     const char* FileName;

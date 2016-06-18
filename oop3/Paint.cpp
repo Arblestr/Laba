@@ -12,9 +12,9 @@ Paint :: ~Paint()
 {
 }
 
-void Paint :: paint_model(cModel& Model, cCamera& Camera)
+void Paint :: paint_model(cModel* Model, cCamera* Camera)
 {
-    cList<cLine> Lines = Model.get_lines();
+    cList<cLine> Lines = Model->get_lines();
 
     if (!Lines.get_count())
     {

@@ -11,7 +11,7 @@ public:
 
     ActionCameraPitch(double Angle);
 
-    virtual void make(BaseElement *Camera);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
@@ -25,7 +25,7 @@ public:
 
     ActionCameraYaw(double Angle);
 
-    virtual void make(BaseElement *Camera);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
@@ -39,12 +39,10 @@ public:
 
     ActionCameraRoll(double Angle);
 
-    virtual void make(BaseElement *Camera);
+    virtual void make(BaseElement* Object, BaseElement* Camera, int Index);
 
 private:
     double Angle;
 };
-
-#include "ActionCameraRotateFuncs.h"
 
 #endif // ACTIONCAMERAROTATE_H

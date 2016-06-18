@@ -7,7 +7,7 @@ class Paint : public BasePaint
 public:
     Paint(FoundationPaint* FoundationPaintObject);
     ~Paint();
-    virtual void paint_model(cModel& Model, cCamera& Camera);
+    virtual void paint_model(cModel* Model, cCamera* Camera);
 
 private:
     FoundationPaint* FoundationPaintObject;
