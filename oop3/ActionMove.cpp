@@ -24,7 +24,7 @@ void ActionMoveX :: make(BaseElement* Object, BaseElement* Camera, int Index)
         throw CreatorMemoryError();
     }
 
-    if (Index > 0)
+    if (Index >= 0)
     {
        int i = 0;
        cIterator<BaseElement*> IndexObject(((cComposite*)Object)->Objects);
@@ -63,7 +63,7 @@ void ActionMoveY :: make(BaseElement* Object, BaseElement* Camera, int Index)
         throw CreatorMemoryError();
     }
 
-    if (Index > 0)
+    if (Index >= 0)
     {
        int i = 0;
        cIterator<BaseElement*> IndexObject(((cComposite*)Object)->Objects);
@@ -102,7 +102,7 @@ void ActionMoveZ :: make(BaseElement* Object, BaseElement* Camera, int Index)
         throw CreatorMemoryError();
     }
 
-    if (Index > 0)
+    if (Index >= 0)
     {
        int i = 0;
        cIterator<BaseElement*> IndexObject(((cComposite*)Object)->Objects);

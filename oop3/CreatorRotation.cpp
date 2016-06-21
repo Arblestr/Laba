@@ -70,7 +70,7 @@ CreatorRotationZ :: CreatorRotationZ(double Angle, cPoint* Center)
 
 BaseChange* CreatorRotationZ :: get_change()
 {
-    BaseChange* RotationZChange = new RotationX(this->Angle,this->Center);
+    BaseChange* RotationZChange = new RotationZ(this->Angle,this->Center);
 
     if (!RotationZChange)
     {

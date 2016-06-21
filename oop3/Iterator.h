@@ -24,6 +24,7 @@ public:
     bool IsNullIter();
 
     cIterator<T> & operator=(const cIterator<T> & GettingIter);
+    cIterator<T>& operator[](int Index);
 
     void go_to_next();
 
@@ -42,6 +43,8 @@ public:
 
     void clear();
     void set_new(T& Info);
+    void set_new_const(T Info);
+
 
 private:
     item<T>* Item;

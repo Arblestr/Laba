@@ -2,11 +2,13 @@
 #define POINT_H
 #include "List.h"
 #include "BaseClass.h"
+#include "Vector.h"
 
 class cPoint: public BaseClass
 {
 public:
     cPoint();
+    cPoint(cVector V);
     cPoint(double X, double Y, double Z);
 
     ~cPoint();

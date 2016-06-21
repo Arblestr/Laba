@@ -6,6 +6,8 @@
 
 QT       += core gui
 
+CONFIG += c++11
+
 TARGET = oop3
 TEMPLATE = app
 
@@ -36,7 +38,9 @@ SOURCES += main.cpp\
     ActionMove.cpp \
     ActionRotate.cpp \
     ActionCameraRotate.cpp \
-    ActionLoad.cpp
+    ActionLoad.cpp \
+    Camera.cpp \
+    MatrixWork.cpp
 
 HEADERS  += mainwindow.h \
     BaseList.h \
@@ -78,7 +82,6 @@ HEADERS  += mainwindow.h \
     VectorError.h \
     BaseCamera.h \
     Camera.h \
-    CameraFuncs.h \
     ActionCameraRotate.h \
     BaseCameraChange.h \
     CreatorCameraRotation.h \
@@ -95,6 +98,9 @@ HEADERS  += mainwindow.h \
     IteratorFuncs.h \
     ActionPaint.h \
     IteratorConst.h \
-    IteratorConstFuncs.h
+    IteratorConstFuncs.h \
+    Matrix.h \
+    MatrixFuncs.h \
+    MatrixWork.h
 
 FORMS    += mainwindow.ui

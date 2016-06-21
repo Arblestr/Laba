@@ -23,7 +23,9 @@ public:
 
     cList<T>& operator=(const cList<T>& List);
 
-    void add_item(T&);
+    //void add_item(T&);
+    void add_item(T);
+    //void add_item(const T&);
     T& del_item();
 
     void clear();

@@ -11,9 +11,9 @@ FoundationPaint :: ~FoundationPaint()
 {
 }
 
-void FoundationPaint :: paint_line(cPoint* A, cPoint* B)
+void FoundationPaint :: paint_line(cPoint A, cPoint B)
 {
-    this->Scene->addLine(A->get_X(),A->get_Y(),B->get_X(),B->get_Y(),this->Pen);
+    this->Scene->addLine(A.get_X(),A.get_Y(),B.get_X(),B.get_Y(),this->Pen);
 }
 
 void FoundationPaint :: set_width(int W)

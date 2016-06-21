@@ -2,13 +2,15 @@
 #define CAMERA_H
 #include "BaseCamera.h"
 #include "Vector.h"
+#include "Matrix.h"
 #include "Point.h"
 
 class cCamera : public BaseCamera
 {
 public:
     cCamera();
-    cCamera(cPoint&, cPoint&, double, double, double);
+    ~cCamera();
+    cCamera(cPoint*, cPoint*, double, double, double);
 
     void set_right(cList<double>);
     void set_up(cList<double>);
@@ -19,6 +21,25 @@ public:
 
     virtual void change(BaseCameraChange*);//?
 
+    cVector get_right();
+    cVector get_up();
+    cVector get_direction();
+
+    cVector get_position();
+    cVector get_target();
+
+    virtual void pitch(double);
+    virtual void yaw(double);
+    virtual void roll(double);
+
+    virtual void rotateVerticalSphere(double);
+    virtual void rotateHorizontalSphere(double);
+
+    Matrix<double>& getView();
+    Matrix<double> getViewT();
+
+    Matrix<double>& getTemp();
+
 private:
     cVector right;
     cVector up;
@@ -26,6 +47,8 @@ private:
 
     cVector position;
     cVector target;
+
+    Matrix<double> temp;
 };
 
 #endif // CAMERA_H

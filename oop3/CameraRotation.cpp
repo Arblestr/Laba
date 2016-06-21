@@ -1,3 +1,4 @@
+
 #include "CameraRotation.h"
 
 CameraPitch :: CameraPitch()
@@ -13,9 +14,9 @@ CameraPitch :: ~CameraPitch()
 {
 }
 
-void CameraPitch :: run(cCamera* Camera)
+void CameraPitch :: run(BaseCamera* Camera)
 {
-    ////////////////////
+    Camera->pitch(this->Angle);
 }
 
 
@@ -32,9 +33,9 @@ CameraYaw :: ~CameraYaw()
 {
 }
 
-void CameraYaw :: run(cCamera* Camera)
+void CameraYaw :: run(BaseCamera* Camera)
 {
-    ////////////////////
+    Camera->yaw(this->Angle);
 }
 
 
@@ -52,7 +53,7 @@ CameraRoll :: ~CameraRoll()
 {
 }
 
-void CameraRoll :: run(cCamera* Camera)
+void CameraRoll :: run(BaseCamera* Camera)
 {
-    ////////////////////
+    Camera->roll(this->Angle);
 }

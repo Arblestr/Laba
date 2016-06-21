@@ -6,6 +6,28 @@
 #include <cstddef>
 
 template<typename T>
+cIterator<T>& cIterator<T>::operator[](int Index)
+{
+    //item<T>* Item;
+    this->go_to_first();
+    int i = 0;
+    while(i < Index)
+    {
+        this->go_to_next();
+        i++;
+    }
+    //this->getByCount(Index);
+
+    return *this;
+}
+
+template<typename T>
+void cIterator<T> :: set_new_const(T Info)
+{
+    this->Item->Info = Info;
+}
+
+template<typename T>
 void cIterator<T> :: set_new(T& Info)
 {
     this->Item->Info = Info;

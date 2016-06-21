@@ -21,7 +21,7 @@ void cComposite::add(BaseElement* BaseElementObject)
     this->Objects.add_item(BaseElementObject);
 }
 
-void cComposite::change(BaseChange* ChangeType)
+void cComposite::change(BaseElementChange* ChangeType)
 {
     cIterator<BaseElement*> IterForChange(this->Objects);
     if (IterForChange.IsNullIter())

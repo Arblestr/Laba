@@ -5,6 +5,13 @@ cPoint :: cPoint()
 {
 }
 
+cPoint :: cPoint(cVector vec)
+{
+    this->X = vec.get_X();
+    this->Y = vec.get_Y();
+    this->Z = vec.get_Z();
+}
+
 cPoint :: cPoint(double X, double Y, double Z)
 {
     this->X = X;

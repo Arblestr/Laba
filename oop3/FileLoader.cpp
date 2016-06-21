@@ -53,10 +53,12 @@ cLine FileLoader :: get_line(cModel* Model) const
     }
     cLine Line;
     cIterator<cPoint> IterForPoints(Model->get_points());
+
     if (IterForPoints.IsNullIter())
     {
         throw IteratorEmptyItemError();
     }
+
     for (int i = 0; i < A; i++)
     {
         IterForPoints.go_to_next();
@@ -140,14 +142,11 @@ void FileLoader :: load_model(BaseElement *Object)
     }
     try
     {
-        if (Num > 1)
-          for (int i = 0; i < Num; i++)
+        for (int i = 0; i < Num; i++)
           {
               cModel* Model = this->get_model();
               Object->add(Model);
           }
-        else
-            Object = this->get_model();
         this->close_file();
     }
     catch(BaseError& err)

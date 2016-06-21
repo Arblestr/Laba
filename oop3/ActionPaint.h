@@ -18,7 +18,7 @@ public:
         Paint* P = new Paint(this->FP);
 
         cCamera* Cam = new cCamera;
-        if (Index > 0)
+        if (Index >= 0)
         {
             cComposite* CompObject = (cComposite*)Camera;
             cIterator<BaseElement*> IndexObject(CompObject->Objects);
@@ -32,14 +32,14 @@ public:
         }
 
         cModel* Model = new cModel;
-        cComposite* CompObject = (cComposite*)Object;
-        cIterator<BaseElement*> IndexObject(CompObject->Objects);
+        cComposite* CompObject2 = (cComposite*)Object;
+        cIterator<BaseElement*> IndexObject2(CompObject2->Objects);
 
-        while (!IndexObject.IsNullIter())
+        while (!IndexObject2.IsNullIter())//null
         {
-            Model = (cModel*)IndexObject.get_value();
+            Model = (cModel*)IndexObject2.get_value();
             P->paint_model(Model,Cam);
-            IndexObject.go_to_next();
+            IndexObject2.go_to_next();
         }
     }
 

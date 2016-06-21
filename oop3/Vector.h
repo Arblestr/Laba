@@ -10,6 +10,7 @@ public:
     cVector();
     cVector(double X, double Y, double Z);
     cVector(const cVector& constVector);
+    cVector(cList<double> arr);
     ~cVector();
 
     void set_X(double X);
@@ -23,14 +24,17 @@ public:
     double get_L() const;
 
     double get_length();
-    double scalar_mult(cVector v1, cVector v2);
+    static double scalar_mult(cVector v1, cVector v2);
     double get_angle(cVector v1, cVector v2);
 
     cVector normalize();
-    //Vector cross(Vector v1, Vector v2);
+    static cVector cross(cVector v1, cVector v2);
 
-    cVector& operator=(cList<double>& newv);
+    cVector& operator=(const cList<double>& newv);
     //cVector& operator=(cList<double>&& newv);
+    cList<double> getArray();
+
+    double operator[](int);
 
 private:
     cList<double> v;

@@ -15,20 +15,27 @@ Paint :: ~Paint()
 void Paint :: paint_model(cModel* Model, cCamera* Camera)
 {
     cList<cLine> Lines = Model->get_lines();
+        if (Lines.get_count() == 0)
+        {
+            throw PaintValuesError();
+        }
 
-    if (!Lines.get_count())
-    {
-        throw PaintValuesError();
-    }
+        cIterator<cLine> Linesiterator(Lines);
 
-    cIterator<cLine> IterForLines(Lines);
+        while (!Linesiterator.IsNullIter())
+        {
+            cLine e = Linesiterator.get_value();
 
-    while (!IterForLines.IsNullIter()) //
-    {
-        cLine Line = IterForLines.get_value();
-        IterForLines.go_to_next();
+            Matrix<double> view(Camera->getView());
+            cVector start(e.get_begin()->point_to_vector());
+            cVector end(e.get_end()->point_to_vector());
 
-        this->FoundationPaintObject->paint_line(Line.get_begin(),Line.get_end());
-    }
+            start = start * Camera->getTemp();
+            end = end * Camera->getTemp();
+
+            this->FoundationPaintObject->paint_line(cPoint(start),cPoint(end));
+
+            Linesiterator.go_to_next();
+        }
 
 }

@@ -11,7 +11,7 @@ public:
     FoundationPaint(QGraphicsScene* Scene);
     ~FoundationPaint();
 
-    virtual void paint_line(cPoint* A, cPoint* B);
+    virtual void paint_line(cPoint A, cPoint B);
     virtual void set_color(int R, int G, int B);
     virtual void set_width(int W);
     virtual void clear();

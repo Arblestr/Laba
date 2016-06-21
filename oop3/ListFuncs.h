@@ -5,6 +5,34 @@
 #include <cstddef>
 
 template <typename T>
+void cList<T> :: add_item( T Info)
+{
+    item<T>* NewItem;
+    NewItem = new item<T>;
+
+    if (!NewItem)
+    {
+        throw ListMemoryError();
+    }
+
+    NewItem->Next = NULL;
+    NewItem->Info = Info;
+
+    if (!this->Head)
+    {
+        this->Head = NewItem;
+        this->Tail = NewItem;
+    }
+    else
+    {
+        this->Tail->Next = NewItem;
+        this->Tail = NewItem;
+    }
+
+    this->Length++;
+}
+
+template <typename T>
 cList<T> :: cList(const cList<T>& ConstList)
 {
     this->Head = NULL;
@@ -79,7 +107,7 @@ cList<T> :: ~cList()
     this->clear();
 }
 
-template <typename T>
+/*template <typename T>
 void cList<T> :: add_item(T& Info)
 {
     item<T>* NewItem;
@@ -105,7 +133,7 @@ void cList<T> :: add_item(T& Info)
     }
 
     this->Length++;
-}
+}*/
 
 template <typename T>
 T& cList<T> :: del_item()

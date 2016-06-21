@@ -8,14 +8,10 @@ public:
     cComposite();
     ~cComposite();
 
-    virtual void change(BaseChange* ChangeType);
+    virtual void change(BaseElementChange* ChangeType);
     virtual void add(BaseElement* BaseElementObject);
 
     void clear();
-    virtual bool IsComposite()
-    {
-        return true;
-    }
 
     cList<BaseElement*> Objects;
 };

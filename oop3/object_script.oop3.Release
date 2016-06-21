@@ -26,5 +26,7 @@ INPUT(
 ./release/ActionRotate.o
 ./release/ActionCameraRotate.o
 ./release/ActionLoad.o
+./release/Camera.o
+./release/MatrixWork.o
 ./release/moc_mainwindow.o
 );

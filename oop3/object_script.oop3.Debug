@@ -26,5 +26,7 @@ INPUT(
 ./debug/ActionRotate.o
 ./debug/ActionCameraRotate.o
 ./debug/ActionLoad.o
+./debug/Camera.o
+./debug/MatrixWork.o
 ./debug/moc_mainwindow.o
 );

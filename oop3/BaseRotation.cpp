@@ -2,7 +2,7 @@
 
 void Rotation :: X_Rotation(cPoint* Point)
 {
-    this->Angle = this->Angle * M_PI / 180.0;
+
     double NewY =
         (Point->get_Y() - Center->get_Y()) * cos(this->Angle) -
         (Point->get_Z() - Center->get_Z()) * sin(this->Angle);
@@ -15,7 +15,7 @@ void Rotation :: X_Rotation(cPoint* Point)
 
 void Rotation :: Y_Rotation(cPoint* Point)
 {
-    this->Angle = this->Angle * M_PI / 180.0;
+
     double NewX =
         (Point->get_X() - Center->get_X()) * cos(this->Angle) -
         (Point->get_Z() - Center->get_Z()) * sin(this->Angle);
@@ -28,7 +28,7 @@ void Rotation :: Y_Rotation(cPoint* Point)
 
 void Rotation :: Z_Rotation(cPoint* Point)
 {
-    this->Angle = this->Angle * M_PI / 180.0;
+
     double NewX =
         (Point->get_X() - Center->get_X()) * cos(this->Angle) -
         (Point->get_Y() - Center->get_Y()) * sin(this->Angle);

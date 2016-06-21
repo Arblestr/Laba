@@ -1,6 +1,9 @@
 #ifndef CAMERAROTATION_H
 #define CAMERAROTATION_H
 #include "BaseCameraChange.h"
+#include "BaseCamera.h"
+#include "MatrixWork.h"
+#include "Matrix.h"
 
 class CameraPitch : public BaseCameraChange
 {
@@ -9,7 +12,7 @@ public:
     CameraPitch(double Angle);
     ~CameraPitch();
 
-    virtual void run(cCamera* Camera);
+    virtual void run(BaseCamera* Camera);
 
 private:
     double Angle;
@@ -22,7 +25,7 @@ public:
     CameraYaw(double Angle);
     ~CameraYaw();
 
-    virtual void run(cCamera* Camera);
+    virtual void run(BaseCamera* Camera);
 
 private:
     double Angle;
@@ -35,7 +38,7 @@ public:
     CameraRoll(double Angle);
     ~CameraRoll();
 
-    virtual void run(cCamera* Camera);
+    virtual void run(BaseCamera* Camera);
 
 private:
     double Angle;

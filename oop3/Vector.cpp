@@ -2,6 +2,56 @@
 #include "VectorError.h"
 #include <cstddef>
 
+cVector::cVector(cList<double> arr)
+{
+    if (arr.get_count() != 4)
+    {
+        //throw VectorSourceSizeError(); // Need add exception file with thouse errors
+    }
+    cIterator<double> iarr(arr);
+    while (!iarr.IsNullIter())
+    {
+        this->v.add_item(iarr.get_value());
+        iarr.go_to_next();
+    }
+}
+
+cList<double> cVector::getArray()
+{
+    cList<double> tmp;
+    double x = this->get_X();
+    double y = this->get_Y();
+    double z = this->get_Z();
+    double l = this->get_L();
+    tmp.add_item(x);
+    tmp.add_item(y);
+    tmp.add_item(z);
+    tmp.add_item(l);
+    return tmp;
+}
+
+double cVector::operator[](int Index)
+{
+    cConstIterator<double> viterator(this->v);
+    //viterator.getByCount(index);
+    int i = 0;
+    while(i < Index)
+    {
+        viterator.go_to_next();
+        i++;
+    }
+    return viterator.get_value();
+}
+
+cVector cVector::cross(cVector vec1, cVector vec2)
+{
+    cVector tmp;
+    tmp.set_X(vec1.get_Z() * vec2.get_Y() - vec1.get_Y() * vec2.get_Z());
+    tmp.set_Y(vec1.get_X() * vec2.get_Z() - vec1.get_Z() * vec2.get_X());
+    tmp.set_Z(vec1.get_Y() * vec2.get_X() - vec1.get_X() * vec2.get_Y());
+    return tmp;
+}
+
 cVector :: cVector(const cVector& constVector)
 {
     double X = constVector.get_X();
@@ -111,7 +161,8 @@ double cVector :: get_length()//
     IterForVec.go_to_next();
     double Z = IterForVec.get_value();
 
-    return sqrt(X*X + Y*Y + Z*Z);
+    double rez = sqrt(X*X + Y*Y + Z*Z);
+    return rez;
 }
 
 double cVector :: scalar_mult(cVector v1, cVector v2)//
@@ -151,12 +202,14 @@ cVector cVector :: normalize()
     if (this->v.get_count() != 4)
         throw VectorLengthError();
 
-    double norm = (1 / (this->get_length()));
+    double norm = 1 / (*this).get_length();
 
     cIterator<double> IterForVec(this->v);
 
-    while (!IterForVec.IsNullIter())
+    int i = 0;
+    while (i < 3)
     {
+        i++;
         double nv = IterForVec.get_value() * norm;
         IterForVec.set_new(nv);
         IterForVec.go_to_next();
@@ -165,13 +218,13 @@ cVector cVector :: normalize()
     return (*this);
 }
 
-cVector& cVector :: operator= (cList<double>& newv)
+cVector& cVector :: operator= (const cList<double>& newv)
 {
     if (newv.get_count() != 4)
         throw VectorLengthError();
 
     cIterator<double> IterForVec1(this->v);
-    cIterator<double> IterForVec2(newv);
+    cConstIterator<double> IterForVec2(newv);
 
     while (!IterForVec2.IsNullIter())
     {

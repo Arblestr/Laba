@@ -10,7 +10,7 @@ RotationX :: ~RotationX()
 
 RotationX :: RotationX(double Angle, cPoint* Center)
 {
-    this->Angle = Angle;
+    this->Angle = Angle * M_PI / 180;
     this->Center = Center;
 }
 
@@ -30,7 +30,7 @@ RotationY :: ~RotationY()
 
 RotationY :: RotationY(double Angle, cPoint* Center)
 {
-    this->Angle = Angle;
+    this->Angle = Angle * M_PI / 180;
     this->Center = Center;
 }
 
@@ -50,7 +50,7 @@ RotationZ :: ~RotationZ()
 
 RotationZ :: RotationZ(double Angle, cPoint* Center)
 {
-    this->Angle = Angle;
+    this->Angle = Angle * M_PI / 180;
     this->Center = Center;
 }
 
