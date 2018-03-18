@@ -8,7 +8,7 @@
         - source
         - created
    
-    - <a href="#"><a href="#">PROGRESS</a> (обработка заявки, информацию взять из <a href="#"><a href="#">bpm_data</a>):
+    - <a href="#"><a href="#">PROGRESS</a> (обработка заявки). Поля (информацию взять из <a href="#"><a href="#">bpm_data</a>):
         - app_id
         - inserted
         - loop_id
