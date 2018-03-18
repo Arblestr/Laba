@@ -1,7 +1,4 @@
-# Laba
-oop3
-
-# Lastunion
+# Цель
 Игра в жанре раннер
 
 [Сайт где можно поиграть](https://lastunion.ml)
